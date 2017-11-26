@@ -38,7 +38,7 @@ public class ChocolateRequest {
 			)
 	@NotNull
 	@Range(min=0, max=50)	
-	private Integer cocoaPawder;
+	private Integer cocoaPowder;
 	@ApiModelProperty(
 			value = "milk(unit is gram)",
 			required = true,
@@ -68,11 +68,11 @@ public class ChocolateRequest {
 	public void setButter(Integer butter) {
 		this.butter = butter;
 	}
-	public Integer getCocoaPawder() {
-		return cocoaPawder;
+	public Integer getCocoaPowderr() {
+		return cocoaPowder;
 	}
-	public void setCocoaPawder(Integer cocoaPawder) {
-		this.cocoaPawder = cocoaPawder;
+	public void setCocoaPowder(Integer cocoaPowder) {
+		this.cocoaPowder = cocoaPowder;
 	}
 	public Integer getMilk() {
 		return milk;
