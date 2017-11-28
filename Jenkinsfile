@@ -1,11 +1,8 @@
-def gitUrl = "https://github.com/c417-jenkins/${repo_name}.git"
-def targetBranch = "master"
-
-def setting
+def gitUrl = "https://github.com/c417-jenkins/choco-factory.git"
 node {
     stage("checkout git") {
       dir("${WORKSPACE}") {
-          git url: "${gitUrl}", branch: "${targetBranch}", credentialsId: "${ChocolateJenkins}"
+          git url: "${gitUrl}", branch: "${BRANCH_NAME}", credentialsId: "${ChocolateJenkins}"
           sh "ls -la"
       }
     }
