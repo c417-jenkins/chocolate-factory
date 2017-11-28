@@ -1,4 +1,4 @@
-def gitUrl = "https://github.com/c417-jenkins/choco-factory.git"
+def gitUrl = "https://github.com/c417-jenkins/chocolate-factory.git"
 node {
     stage("checkout git") {
       dir("${WORKSPACE}") {
