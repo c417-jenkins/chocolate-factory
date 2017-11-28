@@ -42,9 +42,9 @@ public class ChocolateControllerTest {
     	ChocolateRequest req =new ChocolateRequest();
     	req.setCacao(100);
     	req.setButter(100);
-    	req.setCocoaPawder(50);
+    	req.setCocoaPowder(50);
     	req.setMilk(10);
-    	req.setSuger(250);
+    	req.setSugar(250);
     	ObjectMapper mapper = new ObjectMapper();
     	byte[] chocoRequest = mapper.writeValueAsString(req).getBytes();
         MockHttpServletRequestBuilder request = MockMvcRequestBuilders

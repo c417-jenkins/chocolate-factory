@@ -54,7 +54,7 @@ public class ChocolateRequest {
 			)
 	@NotNull
 	@Range(min=0, max=300)
-	private Integer suger;
+	private Integer sugar;
 	
 	public Integer getCacao() {
 		return cacao;
@@ -80,11 +80,11 @@ public class ChocolateRequest {
 	public void setMilk(Integer milk) {
 		this.milk = milk;
 	}
-	public Integer getSuger() {
-		return suger;
+	public Integer getSugar() {
+		return sugar;
 	}
-	public void setSuger(Integer suger) {
-		this.suger = suger;
+	public void setSugar(Integer sugar) {
+		this.sugar = sugar;
 	}
 	
 	
