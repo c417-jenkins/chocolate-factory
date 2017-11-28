@@ -1,14 +1,11 @@
-def gitUrl = "https://github.com/c417-jenkins/chocolate-factory.git"
+def gitUrl = "https://github.com/c417-jenkins/${repo_name}.git"
 def targetBranch = "master"
-
-def contentType = "application/json"
-def postUrl = "http://localhost:8081/c417-factory/api/chocolate"
 
 def setting
 node {
     stage("checkout git") {
       dir("${WORKSPACE}") {
-          git url: "${gitUrl}", branch: "${targetBranch}"
+          git url: "${gitUrl}", branch: "${targetBranch}", credentialsId: "${ChocolateJenkins}"
           sh "ls -la"
       }
     }
@@ -37,13 +34,13 @@ node {
 
     stage("Integration Test") {
       dir("${WORKSPACE}") {
-        println("TODO: curl")
+        println("TODO: integration test")
       }
     }
 
 
     stage("deploy") {
-      println("see you")
+      println("deploy delicious chocolate!!")
     }
 
 }
