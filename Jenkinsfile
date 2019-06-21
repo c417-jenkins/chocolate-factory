@@ -2,7 +2,7 @@ def gitUrl = "https://github.com/c417-jenkins/chocolate-factory.git"
 node {
     stage("checkout git") {
       dir("${WORKSPACE}") {
-          git url: "${gitUrl}", branch: "${BRANCH_NAME}"
+          git url: "${gitUrl}", branch: "master"
           sh "ls -la"
       }
     }
