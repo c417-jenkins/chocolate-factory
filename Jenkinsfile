@@ -15,17 +15,13 @@ node {
 
     stage("Unit Test") {
       dir("${WORKSPACE}") {
-        withMaven( maven: "M3") {
-          sh "mvn test"
-        }
+        sh './mvnw test'
       }
     }
 
     stage("build") {
       dir("${WORKSPACE}") {
-        withMaven( maven: "M3") {
-          sh "mvn pakcage"
-        }
+        sh './mvnw package'
       }
     }
 
