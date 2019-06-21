@@ -24,7 +24,7 @@ node {
     stage("build") {
       dir("${WORKSPACE}") {
         withMaven( maven: "M3") {
-          sh "mvn install"
+          sh "mvn pakcage"
         }
       }
     }
